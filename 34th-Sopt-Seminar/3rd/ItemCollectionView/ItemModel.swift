@@ -11,7 +11,7 @@ struct ItemModel {
     let itemImg: UIImage
     let name: String
     let price: String
-    let heartIsSelected: Bool
+    var heartIsSelected: Bool
     
 }
 

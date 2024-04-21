@@ -16,7 +16,7 @@ final class ItemCollectionViewCell: UICollectionViewCell {
     static let identifier = "ItemCollectionViewCell"
     
     weak var delegate: ItemCollectoinViewCellDelegate?
-    
+    var itemRow: Int?
     private let itemImageView = UIImageView()
     
     private let nameLabel: UILabel = {
@@ -38,9 +38,20 @@ final class ItemCollectionViewCell: UICollectionViewCell {
     private lazy var heartButton: UIButton = {
         let button = UIButton()
         button.setImage(.love, for: .normal)
-        button.setImage(UIImage(systemName: "heart.fill"), for: .selected)
+        button.setImage(UIImage(systemName: "heart.fill")?.withTintColor(UIColor(red: 235/255, green: 8/255, blue: 8/255, alpha: 1)), for: .selected)
+        button.addTarget(self, action: #selector(heartButtonTapped), for: .touchUpInside)
         return button
     }()
+    
+    @objc private func heartButtonTapped(){
+        heartButton.isSelected.toggle()
+        if let itemRow {
+            self.delegate?.heartButtonDidTapEvent(
+                state: self.heartButton.isSelected,
+                row: itemRow
+            )
+        }
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -88,6 +99,6 @@ extension ItemCollectionViewCell {
         nameLabel.text = itemData.name
         priceLabel.text =  itemData.price
         heartButton.isSelected = itemData.heartIsSelected
-        //self.itemRow = itemRow
+        self.itemRow = itemRow
     }
 }

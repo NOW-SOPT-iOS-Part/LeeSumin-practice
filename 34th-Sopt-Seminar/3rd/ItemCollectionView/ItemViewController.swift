@@ -90,8 +90,14 @@ extension ItemViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ItemCollectionViewCell.identifier, for: indexPath) as? ItemCollectionViewCell else { return UICollectionViewCell() }
+        cell.delegate = self
         cell.dataBind(itemData[indexPath.item], itemRow: indexPath.item)
         return cell
     }
 }
 
+extension ItemViewController: ItemCollectoinViewCellDelegate {
+    func heartButtonDidTapEvent(state: Bool, row: Int) {
+        itemData[row].heartIsSelected = state
+    }
+}
