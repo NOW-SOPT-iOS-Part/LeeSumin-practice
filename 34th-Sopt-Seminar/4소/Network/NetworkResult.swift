@@ -5,6 +5,8 @@
 //  Created by 이수민 on 4/27/24.
 //
 
+//네트워크통신 중 예기치 못한 에러가 발생했을 때 이를 더 쉽게 처리하기 위해서 만든 파일
+
 import Foundation
 
 enum NetworkResult<T> {

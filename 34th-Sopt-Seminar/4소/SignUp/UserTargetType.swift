@@ -5,6 +5,7 @@
 //  Created by 이수민 on 4/27/24.
 //
 
+//2단계, api 요청에 필요한 정보를 담은 파일 UserTargetType
 import Foundation
 
 import Moya
@@ -41,10 +42,10 @@ extension UserTargetType: TargetType {
     var task: Moya.Task {
         switch self {
         case .signUp(let request):
-            return .requestJSONEncodable(request)
+            return .requestJSONEncodable(request) //request = body
         case .getUserInfo:
             return .requestPlain
-        }
+        } //어떤 방식으로 소통할 것인지
     }
     
     var headers: [String : String]? {

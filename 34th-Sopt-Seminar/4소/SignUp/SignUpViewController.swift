@@ -153,12 +153,12 @@ final class SignUpViewController: UIViewController {
             password: password,
             nickname: nickName,
             phone: phoneNumber
-        )
+        ) //1단계
         
         UserService.shared.signUp(request: request) { [weak self] response in
             switch response {
             case .success(let data):
-                guard let data = data as? SignUpResponseModel else { return }
+                guard let data = data as? SignUpResponseModel else { return } //5단계 : 해독한 데이터 저장
                 dump(data)
                 self?.pushToCheckUserInfoVC()
             case .requestErr:
@@ -172,7 +172,7 @@ final class SignUpViewController: UIViewController {
             case .networkFail:
                 print("네트워크 오류입니다")
             }
-        }
+        } //에러 핸들링
     }
     
     private func pushToCheckUserInfoVC() {

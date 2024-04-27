@@ -108,8 +108,8 @@
 		7413A31A2BDCC7A20049FDCF /* 4th */ = {
 			isa = PBXGroup;
 			children = (
-				7413A3382BDCCFAD0049FDCF /* UserInfo */,
 				7413A3242BDCCA120049FDCF /* Config.swift */,
+				7413A3382BDCCFAD0049FDCF /* UserInfo */,
 				7413A32D2BDCCEEF0049FDCF /* SignUp */,
 				7413A3262BDCCE4B0049FDCF /* Network */,
 			);

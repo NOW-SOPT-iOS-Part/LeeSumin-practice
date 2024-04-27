@@ -12,4 +12,4 @@ struct SignUpRequestModel: Codable {
     let password: String
     let nickname: String
     let phone: String
-}
+} //1단계

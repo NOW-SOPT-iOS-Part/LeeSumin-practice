@@ -5,6 +5,7 @@
 //  Created by 이수민 on 4/27/24.
 //
 
+//3단계, 실제로 서버에 요청을 보내는 역할
 import Foundation
 
 import Moya
@@ -29,10 +30,10 @@ extension UserService {
                 
             case .failure:
                 completion(.networkFail)
-            }
-        }
+            } //일단 응답 자체가 안 왔다는 건 네트워크 이슈
+        } //응답 옴? 분기처리
     }
-    
+     
     
     func signUp(request: SignUpRequestModel, completion: @escaping (NetworkResult<Any>) -> Void) {
         userProvider.request(.signUp(request: request)) { result in
@@ -67,7 +68,7 @@ extension UserService {
         default:
             return .networkFail
         }
-    }
+    } //응답 success? 분기처리
     
     
     private func isValidData<T: Codable>(data: Data, _ object: T.Type) -> NetworkResult<Any> {
@@ -77,5 +78,5 @@ extension UserService {
             return .pathErr }
         
         return .success(decodedData as Any)
-    }
+    } // 4단계: 데이터 디코딩 분기처리
 }
