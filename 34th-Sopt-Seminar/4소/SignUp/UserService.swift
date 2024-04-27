@@ -34,6 +34,26 @@ extension UserService {
         } //응답 옴? 분기처리
     }
      
+    //로그인 서버 연동 작성 (2)
+    func login(request: LoginRequestModel, completion: @escaping (NetworkResult<Any>) -> Void){
+        //앗 userProvider의 UserTargetType에 case login이 없네! UserTargetType에 login 만들러가야지 !!
+        userProvider.request(.login(request: request)){ result in
+            switch result{
+            case .success(let response):
+                print("성공")
+                let statusCode = response.statusCode
+                let data = response.data
+                
+                let networkResult = self.judgeStatus(by: statusCode, data, LoginResponseModel.self)
+                //LoginResponseModel 만들러 가자!
+                completion(networkResult)
+            
+            case .failure:
+                completion(.networkFail)
+            }
+            
+        }
+    } // 다 썼으면 다시 loginVC로 가서 마무리!
     
     func signUp(request: SignUpRequestModel, completion: @escaping (NetworkResult<Any>) -> Void) {
         userProvider.request(.signUp(request: request)) { result in

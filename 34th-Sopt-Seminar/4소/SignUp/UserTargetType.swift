@@ -14,8 +14,11 @@ import Moya
 enum UserTargetType {
     case getUserInfo(memberId: String)
     case signUp(request: SignUpRequestModel)
+    case login(request: LoginRequestModel) //로그인 서버 연동 작성 (3)
 }
 
+//로그인 서버 연동 작성 (3) -> case login 추가, 일일이 모든 var에 case login 정보에 대해 추가해주자
+//다 했으면 다시 UserService으로 이동!
 extension UserTargetType: TargetType {
     var baseURL: URL {
         return URL(string: Config.baseURL)!
@@ -27,6 +30,8 @@ extension UserTargetType: TargetType {
             return "/member/join"
         case .getUserInfo(memberId: let memberId):
             return "/member/info"
+        case .login:
+            return "/member/login"
         }
     }
     
@@ -36,6 +41,8 @@ extension UserTargetType: TargetType {
             return .post
         case .getUserInfo:
             return .get
+        case .login:
+            return .post
         }
     }
     
@@ -45,6 +52,8 @@ extension UserTargetType: TargetType {
             return .requestJSONEncodable(request) //request = body
         case .getUserInfo:
             return .requestPlain
+        case .login(let request):
+            return .requestJSONEncodable(request)
         } //어떤 방식으로 소통할 것인지
     }
     
@@ -55,6 +64,8 @@ extension UserTargetType: TargetType {
         case .getUserInfo(let memberId):
             return ["Content-Type": "application/json",
                     "memberId" : memberId]
+        case .login:
+            return ["Content-Type": "application/json"]
         }
         
     }
