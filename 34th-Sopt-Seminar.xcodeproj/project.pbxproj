@@ -33,6 +33,11 @@
 		744140932BD3A6B700C90238 /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744140922BD3A6B700C90238 /* ItemViewController.swift */; };
 		744140952BD3AA2700C90238 /* ItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744140942BD3AA2600C90238 /* ItemCollectionViewCell.swift */; };
 		744140972BD3AA9600C90238 /* ItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744140962BD3AA9600C90238 /* ItemModel.swift */; };
+		7443300F2C01BE130098850A /* LoginViewController_DI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7443300E2C01BE130098850A /* LoginViewController_DI.swift */; };
+		744330112C01BE420098850A /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744330102C01BE420098850A /* ViewModelType.swift */; };
+		744330132C01BE660098850A /* LoginViewModel_Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744330122C01BE660098850A /* LoginViewModel_Rx.swift */; };
+		744330152C01BE940098850A /* LoginViewController_Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744330142C01BE940098850A /* LoginViewController_Rx.swift */; };
+		744330172C01BEC10098850A /* LoginViewController_LiveCoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744330162C01BEC10098850A /* LoginViewController_LiveCoding.swift */; };
 		74B321B42BD0E6C900476086 /* UIScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B321B32BD0E6C900476086 /* UIScrollViewController.swift */; };
 		74B321B82BD0E71600476086 /* LoginViewController_Closure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B321B72BD0E71600476086 /* LoginViewController_Closure.swift */; };
 		74B321BA2BD0E72700476086 /* WelcomeViewController_Closure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B321B92BD0E72700476086 /* WelcomeViewController_Closure.swift */; };
@@ -74,6 +79,11 @@
 		744140922BD3A6B700C90238 /* ItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
 		744140942BD3AA2600C90238 /* ItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		744140962BD3AA9600C90238 /* ItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemModel.swift; sourceTree = "<group>"; };
+		7443300E2C01BE130098850A /* LoginViewController_DI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController_DI.swift; sourceTree = "<group>"; };
+		744330102C01BE420098850A /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
+		744330122C01BE660098850A /* LoginViewModel_Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel_Rx.swift; sourceTree = "<group>"; };
+		744330142C01BE940098850A /* LoginViewController_Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController_Rx.swift; sourceTree = "<group>"; };
+		744330162C01BEC10098850A /* LoginViewController_LiveCoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController_LiveCoding.swift; sourceTree = "<group>"; };
 		74B321B32BD0E6C900476086 /* UIScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScrollViewController.swift; sourceTree = "<group>"; };
 		74B321B72BD0E71600476086 /* LoginViewController_Closure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController_Closure.swift; sourceTree = "<group>"; };
 		74B321B92BD0E72700476086 /* WelcomeViewController_Closure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController_Closure.swift; sourceTree = "<group>"; };
@@ -195,6 +205,18 @@
 			path = ItemCollectionView;
 			sourceTree = "<group>";
 		};
+		7443300D2C01BDFC0098850A /* 7th */ = {
+			isa = PBXGroup;
+			children = (
+				7443300E2C01BE130098850A /* LoginViewController_DI.swift */,
+				744330102C01BE420098850A /* ViewModelType.swift */,
+				744330142C01BE940098850A /* LoginViewController_Rx.swift */,
+				744330162C01BEC10098850A /* LoginViewController_LiveCoding.swift */,
+				744330122C01BE660098850A /* LoginViewModel_Rx.swift */,
+			);
+			path = 7th;
+			sourceTree = "<group>";
+		};
 		74B321B22BD0E69E00476086 /* 1st */ = {
 			isa = PBXGroup;
 			children = (
@@ -258,6 +280,7 @@
 				744140852BD38A1700C90238 /* 3rd */,
 				7413A31A2BDCC7A20049FDCF /* 4th */,
 				74D9435E2BB7D7B000DF4AC7 /* Assets.xcassets */,
+				7443300D2C01BDFC0098850A /* 7th */,
 				74D9435B2BB7D7AE00DF4AC7 /* Main.storyboard */,
 				74D943602BB7D7B000DF4AC7 /* LaunchScreen.storyboard */,
 				74D943632BB7D7B000DF4AC7 /* Info.plist */,
@@ -373,11 +396,15 @@
 				74B321BD2BD0E74900476086 /* WelcomeViewController_DelegatePattern.swift in Sources */,
 				744140932BD3A6B700C90238 /* ItemViewController.swift in Sources */,
 				74B321B42BD0E6C900476086 /* UIScrollViewController.swift in Sources */,
+				7443300F2C01BE130098850A /* LoginViewController_DI.swift in Sources */,
 				7413A32F2BDCCF1A0049FDCF /* SignUpRequestModel.swift in Sources */,
 				7413A3332BDCCF5C0049FDCF /* SignUpViewController.swift in Sources */,
 				7413A3352BDCCF840049FDCF /* UserTargetType.swift in Sources */,
 				744140902BD39C7800C90238 /* ChatModel.swift in Sources */,
+				744330172C01BEC10098850A /* LoginViewController_LiveCoding.swift in Sources */,
+				744330152C01BE940098850A /* LoginViewController_Rx.swift in Sources */,
 				7413A32A2BDCCE9F0049FDCF /* MoyaLogginPlugin.swift in Sources */,
+				744330132C01BE660098850A /* LoginViewModel_Rx.swift in Sources */,
 				7413A3312BDCCF400049FDCF /* SignUpResponseModel.swift in Sources */,
 				74D9436E2BB7E63800DF4AC7 /* WelcomeViewController.swift in Sources */,
 				74D943562BB7D7AE00DF4AC7 /* AppDelegate.swift in Sources */,
@@ -391,6 +418,7 @@
 				744140872BD38A5700C90238 /* LoginView.swift in Sources */,
 				7441408B2BD38E9400C90238 /* ChatViewController.swift in Sources */,
 				744140952BD3AA2700C90238 /* ItemCollectionViewCell.swift in Sources */,
+				744330112C01BE420098850A /* ViewModelType.swift in Sources */,
 				7441408D2BD38EC400C90238 /* ChatTableViewCell.swift in Sources */,
 				74D943582BB7D7AE00DF4AC7 /* SceneDelegate.swift in Sources */,
 				7413A3282BDCCE690049FDCF /* NetworkResult.swift in Sources */,
