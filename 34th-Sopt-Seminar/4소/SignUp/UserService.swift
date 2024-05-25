@@ -31,7 +31,7 @@ extension UserService {
             case .failure:
                 completion(.networkFail)
             } //일단 응답 자체가 안 왔다는 건 네트워크 이슈
-        } //응답 옴? 분기처리
+        } //응답 옴? 분
     }
      
     //로그인 서버 연동 작성 (2)
