@@ -43,6 +43,7 @@
 		7443301E2C01C73E0098850A /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 7443301D2C01C73E0098850A /* RxCocoa */; };
 		744330202C01C73E0098850A /* RxCocoa-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 7443301F2C01C73E0098850A /* RxCocoa-Dynamic */; };
 		744330222C01C73E0098850A /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 744330212C01C73E0098850A /* RxRelay */; };
+		74ADF6552C123155005FED13 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74ADF6542C123155005FED13 /* Toast.swift */; };
 		74B321B42BD0E6C900476086 /* UIScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B321B32BD0E6C900476086 /* UIScrollViewController.swift */; };
 		74B321B82BD0E71600476086 /* LoginViewController_Closure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B321B72BD0E71600476086 /* LoginViewController_Closure.swift */; };
 		74B321BA2BD0E72700476086 /* WelcomeViewController_Closure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B321B92BD0E72700476086 /* WelcomeViewController_Closure.swift */; };
@@ -89,6 +90,7 @@
 		744330122C01BE660098850A /* LoginViewModel_Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel_Rx.swift; sourceTree = "<group>"; };
 		744330142C01BE940098850A /* LoginViewController_Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController_Rx.swift; sourceTree = "<group>"; };
 		744330162C01BEC10098850A /* LoginViewController_LiveCoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController_LiveCoding.swift; sourceTree = "<group>"; };
+		74ADF6542C123155005FED13 /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 		74B321B32BD0E6C900476086 /* UIScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScrollViewController.swift; sourceTree = "<group>"; };
 		74B321B72BD0E71600476086 /* LoginViewController_Closure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController_Closure.swift; sourceTree = "<group>"; };
 		74B321B92BD0E72700476086 /* WelcomeViewController_Closure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController_Closure.swift; sourceTree = "<group>"; };
@@ -220,6 +222,7 @@
 			children = (
 				7443300E2C01BE130098850A /* LoginViewController_DI.swift */,
 				744330102C01BE420098850A /* ViewModelType.swift */,
+				74ADF6542C123155005FED13 /* Toast.swift */,
 				744330142C01BE940098850A /* LoginViewController_Rx.swift */,
 				744330162C01BEC10098850A /* LoginViewController_LiveCoding.swift */,
 				744330122C01BE660098850A /* LoginViewModel_Rx.swift */,
@@ -428,6 +431,7 @@
 				744140892BD38ABD00C90238 /* LoginViewController_CustomView.swift in Sources */,
 				7413A33A2BDCCFC00049FDCF /* CheckUserInfoViewController.swift in Sources */,
 				74B321B82BD0E71600476086 /* LoginViewController_Closure.swift in Sources */,
+				74ADF6552C123155005FED13 /* Toast.swift in Sources */,
 				7413A3252BDCCA120049FDCF /* Config.swift in Sources */,
 				74B321BA2BD0E72700476086 /* WelcomeViewController_Closure.swift in Sources */,
 				7413A3412BDCD8990049FDCF /* LoginServerViewController.swift in Sources */,
