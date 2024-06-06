@@ -62,7 +62,7 @@ final class LoginView: UIView {
         return label
     }()
     
-    private let idTextField: UITextField = {
+    let idTextField: UITextField = {
         let textField = UITextField()
         textField.placeholder = "아이디를 입력해주세요"
         textField.font = UIFont(name: "Pretendard-SemiBold", size: 14)
@@ -70,7 +70,7 @@ final class LoginView: UIView {
         return textField
     }()
     
-    private let passwordTextField: UITextField = {
+    let passwordTextField: UITextField = {
         let textField = UITextField()
         textField.placeholder = "비밀번호를 입력해주세요"
         textField.font = UIFont(name: "Pretendard-SemiBold", size: 14)
